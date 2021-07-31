@@ -1,3 +1,9 @@
 from django.db import models
+from django.db import models
 
-# Create your models here.
+class Data(models.Model):
+    username = models.CharField(max_length=120)
+    age = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.username} ---- {self.age}"

@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Welcome to this django series </h1>
-    <h2>make sure you like and subscribe so you dont miss my future videos</h2>
+    {% for element in user_data %}
+        {{element}}
+    {% endfor %}
+
 </body>
 </html>
