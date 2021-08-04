@@ -9,8 +9,20 @@
 <body>
     <h1>Welcome to this django series </h1>
     {% for element in user_data %}
-        {{element}}
+        {{element}} <br>
     {% endfor %}
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <p>Username</p>
+            {{form.username}}
+            <br>
+            <p>Age</p>
+            {{form.age}}
+            <button type="submit">Add Info</button>
+        </form>
+    </div>
 
 </body>
 </html>
